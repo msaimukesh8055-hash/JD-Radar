@@ -4,10 +4,13 @@ description: Run the full JD Radar pipeline - scrape Indian AI PM/PM job posting
 
 Run the full JD Radar pipeline end to end:
 
-1. **Scrape.** Invoke the `jd-scrape-agent` agent to collect ~40-50 raw,
+1. **Scrape.** Invoke the `jd-scrape-agent` agent to collect ~20-25 raw,
    structured JD records (title, company, location, source, url, jd_text) for
    Indian AI Product Manager and Product Manager roles, per the `jd-scraper`
-   skill.
+   skill from from:
+   - FAANG/MNC tech companies (Google, Meta, Microsoft, Amazon, ServiceNow, or similar product companies)
+   - Big 4 / Big 3 consulting firms (Deloitte, Bain, BCG, McKinsey, PwC, EY)
+   - Other large product-focused MNCs in India
 
 2. **Analyze.** Apply the `jd-analyzer` skill to the collected JD records:
    normalize skill mentions, count how many distinct JDs mention each skill,
