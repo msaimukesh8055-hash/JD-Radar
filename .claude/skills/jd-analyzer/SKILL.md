@@ -1,43 +1,77 @@
 ---
 name: jd-analyzer
-description: Use when normalizing, counting, and ranking skills or keywords extracted from a batch of job descriptions, to produce a market-intelligence skill frequency report.
+description: Use when reading raw JD records to infer demanded skills from sentence-level context, normalize and count them, and produce a ranked market-intelligence skill frequency report
 ---
 
 # JD Analyzer Skill
 
-This skill teaches how to turn raw JD records (produced by the `jd-scraper`
-skill) into a ranked skill-frequency report.
+This skill teaches how to turn raw JD records (produced by the jd-scraper skill) into a ranked skill-frequency report.
 
 ## Steps
 
-1. **Normalize skill mentions.**
-   - Merge synonyms/variants into a canonical form, e.g.:
-     - "SQL", "Sql" → "SQL"
-     - "A/B testing", "AB testing" → "A/B Testing"
-     - "Gen AI", "GenAI", "Generative AI" → "Generative AI"
-     - "LLM", "LLMs", "Large Language Models" → "LLMs"
-     - "Stakeholder mgmt", "stakeholder management" → "Stakeholder Management"
-   - Keep both hard skills (tools, technical concepts) and soft/domain skills
-     (stakeholder management, go-to-market strategy, etc.) — both are useful
-     market signal.
+### 1. Read and infer skills from JD text
 
-2. **Count frequency.**
-   - For each canonical skill, count the number of distinct JDs (by URL) that
-     mention it — not total mentions within a single JD.
-   - Compute `% of JDs mentioning it = count / total_JDs_analyzed * 100`.
+For each JD, read through every sentence of the description — not just any "skills" or "requirements" section.
 
-3. **Rank.**
-   - Sort skills by count, descending.
-   - Split into two tiers:
-     - **Top skills** — the top 15-20 skills by count.
-     - **Emerging/niche skills** — mentioned in only a few JDs but
-       noteworthy (e.g., specific AI tools, frameworks, certifications).
+For each sentence, infer what skill(s) it signals — even if the skill is not named explicitly. Be generous but accurate: infer the skill a reasonable PM reading this sentence would recognize as the underlying competency, not a stretch interpretation.
 
-4. **Write the report** following the output format defined in the project
-   `CLAUDE.md`: run metadata, top skills table, emerging skills list,
-   methodology notes.
+Examples of inference:
+- "Partner with engineering and design teams to define product requirements" → Stakeholder Management, PRD Writing
+- "Define and track success metrics for AI features" → Evals, Metrics Definition
+- "Build and iterate on prompts for LLM-based features" → Prompt Engineering
+- "Work with data science to deploy ML models into production" → MLOps, Cross-functional Collaboration
+- "Own the roadmap for our AI agent platform" → AI Agents, Roadmapping, Strategy
+- "Retrieve relevant context from internal knowledge bases for LLM responses" → RAG, Context Engineering
+- "Write SQL queries to analyze user behavior" → SQL, Data Analysis
+- "Communicate progress to leadership and cross-functional stakeholders" → Communications, Stakeholder Management
+
+Build a per-JD list of inferred skills before moving to normalization.
+
+### 2. Normalize skill mentions
+
+Merge synonyms/variants into a canonical form, e.g.:
+- "SQL", "Sql" → "SQL"
+- "A/B testing", "AB testing" → "A/B Testing"
+- "Gen AI", "GenAI", "Generative AI" → "Generative AI"
+- "LLM", "LLMs", "Large Language Models" → "LLMs"
+- "Stakeholder mgmt", "stakeholder management" → "Stakeholder Management"
+- "Prompt design", "prompting", "prompt engineering" → "Prompt Engineering"
+- "RAG", "retrieval augmented generation" → "RAG"
+
+Keep both hard skills (tools, technical concepts) and soft/domain skills (stakeholder management, go-to-market strategy, etc.) — both are useful market signal.
+
+### 3. Count frequency
+
+For each canonical skill, count the number of distinct JDs (by URL) that mention or signal it — not total mentions within a single JD.
+
+Compute % of JDs = count / total_JDs_analyzed * 100.
+
+### 4. Rank
+
+Sort skills by count, descending.
+
+Split into two tiers:
+- **Top skills** — the top 15-20 skills by count.
+- **Emerging/niche skills** — mentioned or signaled in only a few JDs but noteworthy (e.g., specific AI tools, frameworks, certifications).
+
+### 5. Categorize and flag
+
+Assign each top skill to one category: Technical, Strategic, Process, or Domain.
+
+Flag any skill with % of JDs >= 40% as CRITICAL in the output table.
+
+### 6. Handle data quality
+
+Deduplicate JDs by URL before counting — if the same JD appears twice, count it once.
+
+If a JD is missing or has unreadable description text, exclude it from the denominator but note the exclusion count in the report's methodology section.
+
+Total_JDs_analyzed = count of valid, deduplicated JDs actually used — state this number explicitly in the report header.
+
+## Output
+
+Write the report following the output format defined in the project CLAUDE.md: run metadata, top skills table (with category and CRITICAL flags), emerging skills list, methodology notes.
 
 ## Output location
 
-Save the final report to `outputs/skill-report-YYYY-MM-DD.md` (using the
-current date), and also present the top skills table directly in chat.
+Save the final report to `outputs/skill-report-YYYY-MM-DD.md` (using the current date), and also present the top skills table directly in chat.
