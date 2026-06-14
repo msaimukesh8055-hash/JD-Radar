@@ -1,0 +1,27 @@
+{
+  "title": "3-phase prep roadmap for Indian AI PM / PM roles",
+  "step1_heading": "Roadmap & stakeholder fundamentals",
+  "step1_body": [
+    "Universal baseline skill",
+    "11/27 JDs call for roadmap ownership",
+    "9/27 want product strategy & vision",
+    "7/27 want stakeholder management",
+    "Practice: write a 1-pager roadmap + RACI"
+  ],
+  "step2_heading": "AI-native vocabulary",
+  "step2_body": [
+    "Now a parallel track, not a bolt-on",
+    "5/27 JDs mention Generative AI",
+    "5/27 JDs mention Agentic AI",
+    "Concentrated at Google, Salesforce, ServiceNow",
+    "Practice: ship a small LLM-powered prototype"
+  ],
+  "step3_heading": "Data & technical fluency",
+  "step3_body": [
+    "Differentiator at scaleups & technical PM tracks",
+    "Data analysis appears in 4/27 JDs",
+    "Cloud platforms / APIs at HashedIn, Microsoft",
+    "Common at Karat, Toast, KRAFTON, BitGo",
+    "Practice: SQL + a Tableau/looker dashboard"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Skill demand — JD Radar",
+  "subtitle": "Number of JDs (of 27) mentioning each skill",
+  "chart_title": "Top skills by JD count, 14 Jun 2026",
+  "chart": {
+    "categories": ["Roadmapping", "Strategy & Vision", "Stakeholder Mgmt", "Cross-func Collab", "Generative AI", "Agentic AI", "Prioritization", "Technical PM"],
+    "series": {
+      "JDs mentioning skill": [11, 9, 7, 7, 5, 5, 5, 5]
+    }
+  }
+}

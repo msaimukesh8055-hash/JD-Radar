@@ -1,0 +1,400 @@
+{
+  "source_deck": "16x9_Timesaver_PPT.pptx (305 slides, 9 sections)",
+  "sample_deck": "templates/sample-20.pptx",
+  "notes": "shape_id is unique within a slide and found via recursive search (including nested groups). 'lines' = number of paragraphs in that text frame; provide that many strings to keep formatting, fewer/more are handled by the populater (extra paragraphs are removed, missing ones are cloned from the last existing paragraph).",
+  "slides": [
+    {
+      "sample_index": 1,
+      "master_index": 1,
+      "label": "Contents",
+      "section": "Introduction",
+      "category": "toc-grid-8",
+      "description": "Title + intro paragraph + 8 equal boxes, each holding a 2-line 'number / label'. Good for an 8-item index, agenda, or category overview.",
+      "capacity": { "items": 8, "lines_per_item": 2 },
+      "fillable": [
+        { "role": "title", "shape_id": 15, "lines": 1, "current": "Contents" },
+        { "role": "intro_text", "shape_id": 3, "lines": 1, "current": "In Normal view, click on any of the section names..." },
+        { "role": "item1", "shape_id": 2, "lines": 2, "current": "11\\nCovers" },
+        { "role": "item2", "shape_id": 14, "lines": 2, "current": "20\\nTables and structured text" },
+        { "role": "item3", "shape_id": 5, "lines": 2, "current": "68\\nCharts and graphs" },
+        { "role": "item4", "shape_id": 6, "lines": 2, "current": "123\\nDiagrams" },
+        { "role": "item5", "shape_id": 7, "lines": 2, "current": "221\\nIllustrative graphics..." },
+        { "role": "item6", "shape_id": 9, "lines": 2, "current": "301\\nAnimations" },
+        { "role": "item7", "shape_id": 11, "lines": 2, "current": "4\\nBrand basics" },
+        { "role": "item8", "shape_id": 12, "lines": 2, "current": "305\\nEnd slides" }
+      ]
+    },
+    {
+      "sample_index": 2,
+      "master_index": 4,
+      "label": "Brand basics (color palette)",
+      "section": "Brand basics",
+      "category": "color-swatch-table",
+      "description": "Brand-specific color palette tables (4x4 + 10x7). Low general reusability - kept as a structural example of dense swatch/legend tables. Prefer 'table-2col' (sample 9) for general data tables.",
+      "capacity": { "table1": "4x4", "table2": "10x7" },
+      "fillable": [
+        { "role": "title", "shape_id": 2, "lines": 1, "current": "Brand basics" },
+        { "role": "subtitle", "shape_id": 4, "lines": 1, "current": "Color" },
+        { "role": "table1", "shape_id": 5, "table": "4x4" },
+        { "role": "table2", "shape_id": 6, "table": "10x7" }
+      ]
+    },
+    {
+      "sample_index": 3,
+      "master_index": 10,
+      "label": "Document heading three lines",
+      "section": "Covers",
+      "category": "cover-title-3line",
+      "description": "Title/cover page. Large title (up to 3 lines), one-line subtitle (date/author), full-bleed cover image on the right.",
+      "capacity": { "title_lines": 3, "subtitle_lines": 1 },
+      "fillable": [
+        { "role": "title", "shape_id": 13, "lines": 1, "current": "Document heading three lines" },
+        { "role": "subtitle", "shape_id": 15, "lines": 1, "current": "Subtitle, date or author second line" }
+      ],
+      "non_text": [
+        { "role": "cover_image", "shape_id": 5, "type": "picture_placeholder" },
+        { "role": "instructions_box", "shape_id": 3, "action": "delete_in_output" }
+      ]
+    },
+    {
+      "sample_index": 4,
+      "master_index": 12,
+      "label": "Document heading two lines",
+      "section": "Covers",
+      "category": "cover-title-2line",
+      "description": "Alternate dark cover page with a logo image and a 2-line title.",
+      "capacity": { "title_lines": 2, "subtitle_lines": 1 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Document heading two lines" },
+        { "role": "subtitle", "shape_id": 4, "lines": 1, "current": "Subtitle, date or author second line" }
+      ],
+      "non_text": [
+        { "role": "background_image", "shape_id": 5, "type": "picture" },
+        { "role": "logo_image", "shape_id": 7, "type": "picture" },
+        { "role": "instructions_box", "shape_id": 6, "action": "delete_in_output" }
+      ]
+    },
+    {
+      "sample_index": 5,
+      "master_index": 19,
+      "label": "Outline",
+      "section": "Tables and structured text",
+      "category": "tree-3item",
+      "description": "Vertical tree with 3 numbered branches. Each branch is one text box containing a heading line followed by a body paragraph. Good for '3 themes/findings with descriptions'.",
+      "capacity": { "items": 3, "lines_per_item": 2 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Outline" },
+        { "role": "section_label", "shape_id": 28, "lines": 1, "current": "Lorem ipsum" },
+        { "role": "item1_number", "shape_id": 24, "lines": 1, "current": "01" },
+        { "role": "item1_text", "shape_id": 23, "lines": 2, "current": "Lorem ipsum / This is dummy text..." },
+        { "role": "item2_number", "shape_id": 22, "lines": 1, "current": "02" },
+        { "role": "item2_text", "shape_id": 21, "lines": 2, "current": "Lorem ipsum / This is dummy text..." },
+        { "role": "item3_number", "shape_id": 20, "lines": 1, "current": "03" },
+        { "role": "item3_text", "shape_id": 19, "lines": 2, "current": "Lorem ipsum / This is dummy text..." }
+      ]
+    },
+    {
+      "sample_index": 6,
+      "master_index": 20,
+      "label": "Progressive",
+      "section": "Tables and structured text",
+      "category": "roadmap-staircase-3step",
+      "description": "Ascending 3-step staircase diagram. Each step has a number badge, a short heading, and a multi-line body. Classic phased-roadmap / maturity-journey slide.",
+      "capacity": { "steps": 3, "heading_lines": 1, "body_lines": 5 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Progressive" },
+        { "role": "step1_number", "shape_id": 26, "lines": 1, "current": "1" },
+        { "role": "step1_heading", "shape_id": 21, "lines": 1, "current": "XXXXXXXXXXX" },
+        { "role": "step1_body", "shape_id": 18, "lines": 5, "current": "XXXXXX / XXXXXXXXXXX / XXXXXX / ..." },
+        { "role": "step2_number", "shape_id": 25, "lines": 1, "current": "2" },
+        { "role": "step2_heading", "shape_id": 22, "lines": 1, "current": "XXXXXXXXXXX" },
+        { "role": "step2_body", "shape_id": 19, "lines": 5, "current": "XXXXXX / XXXXXXXXXXXXXXXXXXXXXX / ..." },
+        { "role": "step3_number", "shape_id": 24, "lines": 1, "current": "3" },
+        { "role": "step3_heading", "shape_id": 23, "lines": 1, "current": "XXXXXXXXXXX" },
+        { "role": "step3_body", "shape_id": 20, "lines": 5, "current": "XXXXXX / XXXXXXXXXXXXXXXXXXXXXX / ..." }
+      ]
+    },
+    {
+      "sample_index": 7,
+      "master_index": 21,
+      "label": "Bars",
+      "section": "Tables and structured text",
+      "category": "ranked-bars-3item",
+      "description": "3 numbered horizontal bars, each with an icon, a short heading ('N <heading>'), and a 3-line bullet body. Good for top-N rankings, priorities, or workstreams.",
+      "capacity": { "items": 3, "body_lines": 3 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Bars" },
+        { "role": "item1_heading", "shape_id": 17, "lines": 1, "current": "1 Text" },
+        { "role": "item1_body", "shape_id": 29, "lines": 3, "current": "Text / Text / Text" },
+        { "role": "item2_heading", "shape_id": 33, "lines": 1, "current": "2 Text" },
+        { "role": "item2_body", "shape_id": 40, "lines": 3, "current": "Text / Text / Text" },
+        { "role": "item3_heading", "shape_id": 37, "lines": 1, "current": "3 Text" },
+        { "role": "item3_body", "shape_id": 41, "lines": 3, "current": "Text / Text / Text" }
+      ]
+    },
+    {
+      "sample_index": 8,
+      "master_index": 24,
+      "label": "Highlight numbers",
+      "section": "Tables and structured text",
+      "category": "kpi-numbers-6",
+      "description": "Title + subtitle + 6 KPI tiles arranged in a 2x3 grid. Each tile = a big number/stat plus a 3-line description. Good for headline metrics.",
+      "capacity": { "tiles": 6, "desc_lines": 3 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Highlight numbers" },
+        { "role": "subtitle", "shape_id": 2, "lines": 1, "current": "Descriptive text" },
+        { "role": "tile1_number", "shape_id": 53, "lines": 1, "current": "01" },
+        { "role": "tile1_desc", "shape_id": 50, "lines": 3, "current": "Maecenas tincidunt / fringilla felis vel / bibendum." },
+        { "role": "tile2_number", "shape_id": 52, "lines": 1, "current": "02" },
+        { "role": "tile2_desc", "shape_id": 65, "lines": 3, "current": "Maecenas tincidunt / fringilla felis vel / bibendum." },
+        { "role": "tile3_number", "shape_id": 58, "lines": 1, "current": "03" },
+        { "role": "tile3_desc", "shape_id": 69, "lines": 3, "current": "Maecenas tincidunt / fringilla felis vel / bibendum." },
+        { "role": "tile4_number", "shape_id": 56, "lines": 1, "current": "04" },
+        { "role": "tile4_desc", "shape_id": 55, "lines": 3, "current": "Maecenas tincidunt / fringilla felis vel / bibendum." },
+        { "role": "tile5_number", "shape_id": 59, "lines": 1, "current": "05" },
+        { "role": "tile5_desc", "shape_id": 67, "lines": 3, "current": "Maecenas tincidunt / fringilla felis vel / bibendum." },
+        { "role": "tile6_number", "shape_id": 61, "lines": 1, "current": "06" },
+        { "role": "tile6_desc", "shape_id": 71, "lines": 3, "current": "Maecenas tincidunt / fringilla felis vel / bibendum." }
+      ]
+    },
+    {
+      "sample_index": 9,
+      "master_index": 26,
+      "label": "Tables",
+      "section": "Tables and structured text",
+      "category": "table-2col",
+      "description": "Title + subtitle + a 5-row x 2-col table (1 header row + 4 data rows: row title / description). General-purpose data table.",
+      "capacity": { "table": "5x2 (1 header + 4 data rows)" },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Tables" },
+        { "role": "subtitle", "shape_id": 4, "lines": 1, "current": "Tables with text" },
+        { "role": "table", "shape_id": 19, "table": "5x2" }
+      ]
+    },
+    {
+      "sample_index": 10,
+      "master_index": 57,
+      "label": "Steps",
+      "section": "Tables and structured text",
+      "category": "process-steps-3",
+      "description": "Title + subtitle + 3 sequential step callouts, each with a 'Step N' label and a short description. Good for simple process/procedure slides.",
+      "capacity": { "steps": 3, "desc_lines": 2 },
+      "fillable": [
+        { "role": "title", "shape_id": 276484, "lines": 1, "current": "Steps" },
+        { "role": "subtitle", "shape_id": 5, "lines": 1, "current": "Three" },
+        { "role": "step1_label", "shape_id": 276488, "lines": 1, "current": "Step 1" },
+        { "role": "step1_desc", "shape_id": 18, "lines": 2, "current": "This is dummy text..." },
+        { "role": "step2_label", "shape_id": 276489, "lines": 1, "current": "Step 2" },
+        { "role": "step2_desc", "shape_id": 21, "lines": 2, "current": "This is dummy text..." },
+        { "role": "step3_label", "shape_id": 276491, "lines": 1, "current": "Step 3" },
+        { "role": "step3_desc", "shape_id": 22, "lines": 2, "current": "This is dummy text..." }
+      ],
+      "non_text": [
+        { "role": "background_label", "shape_id": 4, "action": "leave_or_delete" }
+      ]
+    },
+    {
+      "sample_index": 11,
+      "master_index": 62,
+      "label": "Diagonal boxes",
+      "section": "Tables and structured text",
+      "category": "diagonal-boxes-3",
+      "description": "Title + subtitle + 3 staggered/diagonal boxes, each with a short heading and a 2-line body, plus 3 small footer labels. Good for '3 pillars/pointers' layouts.",
+      "capacity": { "boxes": 3, "body_lines": 2, "footer_labels": 3 },
+      "fillable": [
+        { "role": "title", "shape_id": 278532, "lines": 1, "current": "Diagonal boxes" },
+        { "role": "subtitle", "shape_id": 5, "lines": 1, "current": "Three steps" },
+        { "role": "boxA_heading", "shape_id": 19, "lines": 1, "current": "Text" },
+        { "role": "boxA_body", "shape_id": 39, "lines": 2, "current": "This is dummy text..." },
+        { "role": "boxB_heading", "shape_id": 13, "lines": 1, "current": "Text" },
+        { "role": "boxB_body", "shape_id": 38, "lines": 2, "current": "This is dummy text..." },
+        { "role": "boxC_heading", "shape_id": 20, "lines": 1, "current": "Text" },
+        { "role": "boxC_body", "shape_id": 31, "lines": 2, "current": "This is dummy text..." },
+        { "role": "footer1", "shape_id": 48, "lines": 1, "current": "Text" },
+        { "role": "footer2", "shape_id": 50, "lines": 1, "current": "Text" },
+        { "role": "footer3", "shape_id": 54, "lines": 1, "current": "Text" }
+      ],
+      "non_text": [
+        { "role": "background_label", "shape_id": 4, "action": "leave_or_delete" }
+      ]
+    },
+    {
+      "sample_index": 12,
+      "master_index": 74,
+      "label": "Column chart",
+      "section": "Charts and graphs",
+      "category": "chart-column",
+      "description": "Title + subtitle + chart title + a native PowerPoint column chart (1 series). Data is edited via the chart's embedded worksheet (categories + values).",
+      "capacity": { "series": 1, "categories": "variable" },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Column chart" },
+        { "role": "subtitle", "shape_id": 2, "lines": 1, "current": "Single highlight color" },
+        { "role": "chart_title", "shape_id": 5, "lines": 1, "current": "Title of the graph goes here" },
+        { "role": "chart", "shape_id": 23, "chart_type": "COLUMN_CLUSTERED", "current_categories": ["Label","Label","Label","Label","Label","Label","Label","Label"], "current_series": {"Series 1": [2.0,2.4,3.0,5.0,1.8,2.8]} }
+      ]
+    },
+    {
+      "sample_index": 13,
+      "master_index": 86,
+      "label": "Pie chart",
+      "section": "Charts and graphs",
+      "category": "chart-pie",
+      "description": "Title + subtitle + a native pie chart (1 series) on the left, plus a bulleted commentary text box on the right.",
+      "capacity": { "series": 1, "categories": "variable" },
+      "fillable": [
+        { "role": "title", "shape_id": 12, "lines": 1, "current": "Pie chart" },
+        { "role": "subtitle", "shape_id": 2, "lines": 1, "current": "Subtitle" },
+        { "role": "chart", "shape_id": 38, "chart_type": "PIE", "current_categories": ["Label A","Label B","Label C","Label D","Label E","Label F","Label G","Label H"], "current_series": {"Q1": [10,10,10,10,10,10]} },
+        { "role": "commentary", "shape_id": 7, "lines": 1, "current": "This is a level 1 bullet..." }
+      ]
+    },
+    {
+      "sample_index": 14,
+      "master_index": 98,
+      "label": "Line chart",
+      "section": "Charts and graphs",
+      "category": "chart-line-multiseries",
+      "description": "Title + subtitle + chart title + a native multi-series line chart. Good for trends over time across several categories/segments.",
+      "capacity": { "series": "variable (currently 4)", "categories": "variable" },
+      "fillable": [
+        { "role": "title", "shape_id": 2, "lines": 1, "current": "Line chart" },
+        { "role": "subtitle", "shape_id": 6, "lines": 1, "current": "Full page multi colors" },
+        { "role": "chart_title", "shape_id": 4, "lines": 1, "current": "Chart title runs here" },
+        { "role": "chart", "shape_id": 15, "chart_type": "LINE", "current_categories": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"], "current_series": {"Construction":[38,46,48,68,50,49], "Financial Services":[20,23,28,21,30,28], "Healthcare":[18,25,34,97,40,37], "Transportation":[14,16,18,10,18,20]} }
+      ]
+    },
+    {
+      "sample_index": 15,
+      "master_index": 123,
+      "label": "Process diagram",
+      "section": "Diagrams",
+      "category": "process-circle-6node",
+      "description": "Title + subtitle + 6 connected circular nodes arranged in a hex layout. Each node holds a 2-line 'number / detail' label. Good for cyclical or multi-step processes.",
+      "capacity": { "nodes": 6, "lines_per_node": 2 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Process diagram" },
+        { "role": "subtitle", "shape_id": 2, "lines": 1, "current": "Simple" },
+        { "role": "node1", "shape_id": 5, "lines": 2, "current": "1\\nDetail one" },
+        { "role": "node2", "shape_id": 36, "lines": 2, "current": "2\\nDetail two" },
+        { "role": "node3", "shape_id": 37, "lines": 2, "current": "3\\nDetail three" },
+        { "role": "node4", "shape_id": 38, "lines": 2, "current": "4\\nDetail four" },
+        { "role": "node5", "shape_id": 39, "lines": 2, "current": "5\\nDetail five" },
+        { "role": "node6", "shape_id": 40, "lines": 2, "current": "6\\nDetail six" }
+      ]
+    },
+    {
+      "sample_index": 16,
+      "master_index": 138,
+      "label": "Organization chart",
+      "section": "Diagrams",
+      "category": "org-chart",
+      "description": "Title + subtitle + a fixed org-chart hierarchy: 1 sponsor box + 9 role boxes (each role label + name/description), pre-wired with connector lines.",
+      "capacity": { "sponsor": 1, "roles": 9 },
+      "fillable": [
+        { "role": "title", "shape_id": 242701, "lines": 1, "current": "Organization chart" },
+        { "role": "subtitle", "shape_id": 4, "lines": 1, "current": "Simple" },
+        { "role": "sponsor_role", "shape_id": 45, "lines": 1, "current": "Sponsor" },
+        { "role": "sponsor_name", "shape_id": 46, "lines": 1, "current": "Name Surname" },
+        { "role": "box1_role", "shape_id": 48, "lines": 1, "current": "Project management" },
+        { "role": "box1_name", "shape_id": 49, "lines": 2, "current": "Name Surname\\nName Surname" },
+        { "role": "box2_role", "shape_id": 51, "lines": 1, "current": "QA" },
+        { "role": "box2_name", "shape_id": 52, "lines": 1, "current": "Short description" },
+        { "role": "box3_role", "shape_id": 54, "lines": 1, "current": "PMO" },
+        { "role": "box3_name", "shape_id": 55, "lines": 2, "current": "Name Surname\\nName Surname" },
+        { "role": "box4_role", "shape_id": 57, "lines": 1, "current": "Project management" },
+        { "role": "box4_name", "shape_id": 58, "lines": 2, "current": "Name Surname\\nName Surname" },
+        { "role": "box5_role", "shape_id": 60, "lines": 1, "current": "Subject experts" },
+        { "role": "box5_name", "shape_id": 61, "lines": 2, "current": "Name Surname\\nName Surname" },
+        { "role": "box6_role", "shape_id": 63, "lines": 1, "current": "Workstream" },
+        { "role": "box6_name", "shape_id": 64, "lines": 2, "current": "Name Surname\\nName Surname" },
+        { "role": "box7_role", "shape_id": 66, "lines": 1, "current": "Workstream" },
+        { "role": "box7_name", "shape_id": 67, "lines": 2, "current": "Name Surname\\nName Surname" },
+        { "role": "box8_role", "shape_id": 69, "lines": 1, "current": "Workstream" },
+        { "role": "box8_name", "shape_id": 70, "lines": 2, "current": "Name Surname\\nName Surname" },
+        { "role": "box9_role", "shape_id": 72, "lines": 1, "current": "Workstream" },
+        { "role": "box9_name", "shape_id": 73, "lines": 2, "current": "Name Surname\\nName Surname" }
+      ]
+    },
+    {
+      "sample_index": 17,
+      "master_index": 159,
+      "label": "Portfolio matrix",
+      "section": "Diagrams",
+      "category": "matrix-2x2-portfolio",
+      "description": "Title + subtitle + bulleted commentary on the left, and a 2x2 strategy matrix on the right with labeled axes and quadrant call-outs. Axis/quadrant labels are editable; plotting new bubbles/items inside the matrix is not supported by text-fill alone.",
+      "capacity": { "commentary_bullets": "variable", "quadrant_labels": 3, "axis_labels": 2 },
+      "fillable": [
+        { "role": "title", "shape_id": 775169, "lines": 1, "current": "Portfolio matrix" },
+        { "role": "subtitle", "shape_id": 4, "lines": 1, "current": "Subtitle" },
+        { "role": "commentary", "shape_id": 2, "lines": 1, "current": "This is a level 1 bullet..." },
+        { "role": "xaxis_label", "shape_id": 30, "lines": 2, "current": "Competitive position\\n(returns compared to industry...)" },
+        { "role": "yaxis_label", "shape_id": 34, "lines": 2, "current": "Market attractiveness\\n(industry average returns...)" },
+        { "role": "quadrant_above", "shape_id": 37, "lines": 1, "current": "ROCE > CoC" },
+        { "role": "quadrant_below", "shape_id": 38, "lines": 1, "current": "ROCE < CoC" },
+        { "role": "quadrant_equal", "shape_id": 39, "lines": 1, "current": "ROCE = CoC" }
+      ]
+    },
+    {
+      "sample_index": 18,
+      "master_index": 214,
+      "label": "Timeline",
+      "section": "Diagrams",
+      "category": "timeline-8point",
+      "description": "Title + subtitle + a horizontal timeline with up to 8 alternating above/below markers. Each marker holds a date/number plus a 3-line description, grouped under 3 period labels (e.g. months).",
+      "capacity": { "points": 8, "desc_lines": 3, "period_labels": 3 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Timeline" },
+        { "role": "subtitle", "shape_id": 2, "lines": 1, "current": "Pull out dates" },
+        { "role": "point1", "shape_id": 19, "lines": 4, "current": "04\\nLorem ipsum\\nodit que perovit\\nunt pa voluptio" },
+        { "role": "point2", "shape_id": 23, "lines": 4, "current": "22\\n..." },
+        { "role": "point3", "shape_id": 32, "lines": 4, "current": "23\\n..." },
+        { "role": "point4", "shape_id": 42, "lines": 4, "current": "26\\n..." },
+        { "role": "point5", "shape_id": 45, "lines": 4, "current": "16\\n..." },
+        { "role": "point6", "shape_id": 48, "lines": 4, "current": "5\\n..." },
+        { "role": "point7", "shape_id": 51, "lines": 4, "current": "15\\n..." },
+        { "role": "point8", "shape_id": 56, "lines": 4, "current": "13\\n..." },
+        { "role": "period1", "shape_id": 57, "lines": 1, "current": "June" },
+        { "role": "period2", "shape_id": 58, "lines": 1, "current": "July" },
+        { "role": "period3", "shape_id": 59, "lines": 1, "current": "August" }
+      ]
+    },
+    {
+      "sample_index": 19,
+      "master_index": 221,
+      "label": "Icon chart",
+      "section": "Illustrative graphics, charts and diagrams",
+      "category": "icon-grid-4item",
+      "description": "4 hexagon/pentagon icon callouts arranged 2x2, each with a short 2-line label and a one-sentence description. Good for '4 pillars/capabilities/principles'.",
+      "capacity": { "items": 4, "label_lines": 2, "desc_lines": 1 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Icon chart" },
+        { "role": "item1_label", "shape_id": 58, "lines": 2, "current": "Lorem\\nipsum" },
+        { "role": "item1_desc", "shape_id": 59, "lines": 1, "current": "Lorem ipsum dolor sit amet..." },
+        { "role": "item2_label", "shape_id": 65, "lines": 2, "current": "Lorem\\nipsum" },
+        { "role": "item2_desc", "shape_id": 66, "lines": 1, "current": "Lorem ipsum dolor sit amet..." },
+        { "role": "item3_label", "shape_id": 72, "lines": 2, "current": "Lorem\\nipsum" },
+        { "role": "item3_desc", "shape_id": 73, "lines": 1, "current": "Lorem ipsum dolor sit amet..." },
+        { "role": "item4_label", "shape_id": 79, "lines": 2, "current": "Lorem\\nipsum" },
+        { "role": "item4_desc", "shape_id": 80, "lines": 1, "current": "Lorem ipsum dolor sit amet..." }
+      ]
+    },
+    {
+      "sample_index": 20,
+      "master_index": 256,
+      "label": "Funnel",
+      "section": "Illustrative graphics, charts and diagrams",
+      "category": "funnel-6stage",
+      "description": "Title + a 6-stage funnel graphic, each stage with a short single-line label. Good for conversion/process funnels.",
+      "capacity": { "stages": 6 },
+      "fillable": [
+        { "role": "title", "shape_id": 3, "lines": 1, "current": "Funnel" },
+        { "role": "stage1", "shape_id": 11, "lines": 1, "current": "Category" },
+        { "role": "stage2", "shape_id": 12, "lines": 1, "current": "Category" },
+        { "role": "stage3", "shape_id": 13, "lines": 1, "current": "Category" },
+        { "role": "stage4", "shape_id": 14, "lines": 1, "current": "Category" },
+        { "role": "stage5", "shape_id": 15, "lines": 1, "current": "Category" },
+        { "role": "stage6", "shape_id": 16, "lines": 1, "current": "Category" }
+      ]
+    }
+  ]
+}

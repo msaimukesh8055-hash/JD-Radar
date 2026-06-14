@@ -1,0 +1,16 @@
+{
+  "title": "JD Radar — run snapshot",
+  "subtitle": "Indian AI PM / PM postings, run date 14 Jun 2026",
+  "tile1_number": "27",
+  "tile1_desc": ["valid JDs", "analyzed this", "run (of 35 collected)"],
+  "tile2_number": "15",
+  "tile2_desc": ["companies covered,", "incl. Google, Amazon,", "Microsoft, Salesforce"],
+  "tile3_number": "11",
+  "tile3_desc": ["JDs mention", "Roadmapping —", "the #1 ranked skill"],
+  "tile4_number": "5",
+  "tile4_desc": ["JDs mention", "Generative AI", "(Google, Salesforce)"],
+  "tile5_number": "5",
+  "tile5_desc": ["JDs mention", "Agentic AI", "(Salesforce, ServiceNow)"],
+  "tile6_number": "6",
+  "tile6_desc": ["locations covered:", "Bengaluru, Hyderabad,", "Pune, Mumbai + more"]
+}
