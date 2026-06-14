@@ -1,0 +1,5 @@
+[project]
+name = "jd-radar"
+version = "0.1.0"
+description = "Job description tracking and analysis tool"
+requires-python = ">=3.10"
