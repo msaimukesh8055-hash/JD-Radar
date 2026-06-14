@@ -39,12 +39,14 @@ Target: 20-25 job descriptions per run, focused on roles such as:
 ## Output Format
 The report must include:
 - Run metadata (date, total_JDs_analyzed — valid deduplicated JDs used,
-  sources used, queries run)
-- Top skills table, ranked by frequency (skill, count, % of JDs mentioning
-  it, category — Technical / Strategic / Process / Domain). Flag any skill
-  with % of JDs >= 40% as CRITICAL.
-- Notable emerging/niche skills (mentioned or signaled in fewer JDs but
-  worth flagging)
+  sources used, companies covered)
+- Top skills summary: skill name and the number of JDs that mention or
+  signal it, ranked by count, top 15-20. No percentages, categories, or
+  CRITICAL flags — just skill + count.
+- Company-by-company breakdown: for every JD analyzed, list the company,
+  role title, location, and the top 3-6 skills that JD signals.
+- Key takeaways: analysis and synthesis of the findings, including the
+  analyst's own observations on patterns and what they mean.
 - Brief methodology note (sources, search queries used, JD dedup/exclusion
   count, limitations)
 

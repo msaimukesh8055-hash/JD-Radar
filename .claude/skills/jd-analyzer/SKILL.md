@@ -44,33 +44,39 @@ Keep both hard skills (tools, technical concepts) and soft/domain skills (stakeh
 
 For each canonical skill, count the number of distinct JDs (by URL) that mention or signal it — not total mentions within a single JD.
 
-Compute % of JDs = count / total_JDs_analyzed * 100.
+### 4. Rank into a top skills summary
 
-### 4. Rank
+Sort skills by count, descending. Take the top 15-20 skills.
 
-Sort skills by count, descending.
+This summary is just **skill name + count of distinct JDs** — no
+percentages, no categories, no CRITICAL flags.
 
-Split into two tiers:
-- **Top skills** — the top 15-20 skills by count.
-- **Emerging/niche skills** — mentioned or signaled in only a few JDs but noteworthy (e.g., specific AI tools, frameworks, certifications).
+### 5. Build the company-by-company breakdown
 
-### 5. Categorize and flag
+For every valid JD, produce one entry with:
+- **Company**
+- **Role** (job title as posted)
+- **Location**
+- **Top skills** — the 3-6 most representative skills inferred for that
+  specific JD (a short, readable shortlist, not the full inferred list)
 
-Assign each top skill to one category: Technical, Strategic, Process, or Domain.
-
-Flag any skill with % of JDs >= 40% as CRITICAL in the output table.
+This is the core of the report — it lets a reader scan "what does each
+employer actually want" at a glance.
 
 ### 6. Handle data quality
 
 Deduplicate JDs by URL before counting — if the same JD appears twice, count it once.
 
-If a JD is missing or has unreadable description text, exclude it from the denominator but note the exclusion count in the report's methodology section.
+If a JD is missing or has unreadable description text, exclude it from the denominator and from the company-by-company breakdown, but note the exclusion count (and which postings were excluded) in the report's methodology section.
 
 Total_JDs_analyzed = count of valid, deduplicated JDs actually used — state this number explicitly in the report header.
 
 ## Output
 
-Write the report following the output format defined in the project CLAUDE.md: run metadata, top skills table (with category and CRITICAL flags), emerging skills list, methodology notes.
+Write the report following the output format defined in the project CLAUDE.md:
+run metadata, top skills summary (skill + count only), company-by-company
+breakdown (company, role, location, top skills), key takeaways/analysis, and
+methodology notes.
 
 ## Output location
 
