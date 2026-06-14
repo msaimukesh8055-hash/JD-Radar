@@ -8,7 +8,7 @@ produces a clean market intelligence report.
 ## How it works
 
 1. **`jd-scrape-agent`** (powered by the `jd-scraper` skill) searches Google
-   Jobs, Naukri, and Indeed India for relevant postings and collects raw,
+   Jobs, company websites, greenhouse, Naukri, and Indeed, all in India for relevant postings in MNCs like google, facebook, servicenow, etc or deloitte or similar consulting firms or industry companies and collects raw,
    structured JD data — title, company, location, source, URL, and JD text.
 2. **`jd-analyzer`** skill normalizes and counts skill mentions across the
    collected postings and ranks them by how many distinct JDs mention each
@@ -24,7 +24,7 @@ From within this project folder, run:
 /run-radar
 ```
 
-This triggers the full pipeline: scrape ~40-50 job postings, analyze and rank
+This triggers the full pipeline: scrape ~20 job postings or more, analyze and rank
 the skills mentioned, and write a dated report to `outputs/`.
 
 ## Project structure
