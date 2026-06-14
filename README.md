@@ -30,7 +30,7 @@ the skills mentioned, and write a dated report to `outputs/`.
 ## Project structure
 
 ```
-jd-radar/
+JD-Radar/
 ├── CLAUDE.md                       # project rules: objective, sources, output format, constraints
 ├── README.md
 ├── .claude/
