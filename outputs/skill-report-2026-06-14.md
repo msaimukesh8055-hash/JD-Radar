@@ -1,72 +1,79 @@
 # JD Radar — Skill Demand Report
 
-**Roles:** AI Product Manager & Product Manager (India)
+**Roles:** Product Manager / AI Product Manager / Product Owner — Indian MNCs
 
 ## Run Metadata
 
 | Field | Value |
 |---|---|
 | Run date | 2026-06-14 |
-| JDs analyzed | 47 |
-| Sources | Google Jobs (incl. company ATS pages via search), Naukri/Instahyre, Indeed India, Glassdoor |
-| Role focus | AI Product Manager, Product Manager (AI/ML), Senior/Principal/Staff PM |
-| Locations covered | Bengaluru, Mumbai, Hyderabad, Noida/Delhi NCR, Gurgaon, Pune, Remote-India |
+| JDs collected | 35 |
+| JDs excluded (insufficient text) | 8 |
+| **total_JDs_analyzed** | **27** |
+| Sources | Company career sites, Google Jobs, Greenhouse, LinkedIn, Indeed/aggregators |
+| Company focus | MNCs & consulting — Google, Amazon, Microsoft, Salesforce, Mastercard, Walmart Global Tech, ServiceNow, SAP Labs, Accenture, Cognizant, Deloitte/HashedIn, PwC, Karat, Toast, KRAFTON, BitGo |
+| Locations | Bengaluru, Hyderabad, Pune, Gurugram/Delhi NCR, Mumbai, Remote-India |
 | Data collection | WebSearch (primary), WebFetch (best-effort fallback) |
 
 ## Top Skills (ranked by frequency)
 
-| Rank | Skill | JDs | % of JDs |
-|---|---|---:|---:|
-| 1 | Product Management (core: vision → execution) | 47 | 100% |
-| 2 | Machine Learning / AI-ML fundamentals | 26 | 55% |
-| 3 | Product Strategy & Roadmap ownership | 24 | 51% |
-| 4 | Data Analysis / Analytics (metrics, KPIs) | 12 | 26% |
-| 5 | Agentic AI / AI Agents / agentic workflows | 11 | 23% |
-| 6 | Cross-functional collaboration | 11 | 23% |
-| 7 | Generative AI (GenAI) | 8 | 17% |
-| 8 | Stakeholder Management | 8 | 17% |
-| 9 | Enterprise / B2B SaaS domain | 8 | 17% |
-| 10 | PRDs / Product Documentation (user stories, PRFAQ) | 8 | 17% |
-| 11 | Communication (written & verbal) | 7 | 15% |
-| 12 | LLMs (Large Language Models) | 6 | 13% |
-| 13 | Cloud Platforms (AWS/Azure/GCP, cloud-scale) | 5 | 11% |
-| 14 | AI Model Evaluation / Lifecycle (MLOps) | 5 | 11% |
-| 15 | SQL | 4 | 9% |
-| 16 | APIs / API-first design | 4 | 9% |
-| 17 | Governance / Responsible AI / RBAC | 4 | 9% |
-| 18 | Product Lifecycle Management | 4 | 9% |
-| 19 | Go-to-Market (GTM) strategy | 4 | 9% |
-| 20 | RAG (Retrieval-Augmented Generation) | 3 | 6% |
+Skills flagged **CRITICAL** appear in ≥40% of analyzed JDs.
 
-## Emerging / Niche Skills
+| Rank | Skill | JDs | % | Category | Flag |
+|---|---|---:|---:|---|---|
+| 1 | Product Management (core) | 27 | 100% | Process | **CRITICAL** |
+| 2 | Stakeholder Management | 13 | 48% | Process | **CRITICAL** |
+| 3 | Cross-functional Collaboration | 13 | 48% | Process | **CRITICAL** |
+| 4 | Roadmapping | 12 | 44% | Strategic | **CRITICAL** |
+| 5 | AI/ML (product knowledge) | 12 | 44% | Technical | **CRITICAL** |
+| 6 | Product Strategy & Vision | 11 | 41% | Strategic | **CRITICAL** |
+| 7 | PRD / User Story Writing | 8 | 30% | Process | — |
+| 8 | Data Analysis / Analytics | 7 | 26% | Technical | — |
+| 9 | Prioritization | 7 | 26% | Process | — |
+| 10 | Technical Product Management | 7 | 26% | Technical | — |
+| 11 | Agentic AI / AI Agents | 6 | 22% | Technical | — |
+| 12 | User Research / Customer Discovery | 5 | 19% | Strategic | — |
+| 13 | Metrics Definition / KPIs | 5 | 19% | Strategic | — |
+| 14 | LLMs | 4 | 15% | Technical | — |
+| 15 | Agile / Scrum | 4 | 15% | Process | — |
+| 16 | Backlog Management | 4 | 15% | Process | — |
+| 17 | Go-to-Market | 4 | 15% | Strategic | — |
+| 18 | Communication | 4 | 15% | Process | — |
+| 19 | Generative AI | 3 | 11% | Technical | — |
+| 20 | APIs | 3 | 11% | Technical | — |
 
-These appeared in only a few postings but signal where the AI PM role is heading:
+## Notable Emerging / Niche Skills
 
-- **Daily AI-tool fluency (Claude / ChatGPT in workflow)** — 2 JDs; increasingly listed as a baseline expectation, not a bonus.
-- **No-code / low-code building (Replit, Lovable, Cursor)** — 1 JD (Razorpay); PMs expected to prototype themselves.
-- **MCP (Model Context Protocol)** — 2 JDs; agent-platform governance roles.
-- **Tool-calling / orchestration frameworks** — 3 JDs.
-- **Prompt design / context-window management** — 2 JDs.
-- **Vector databases** — 2 JDs; **Knowledge graphs** — 1 JD.
-- **Speech tech (ASR/TTS; WER/CER/MOS metrics)** — 1 JD (Sarvam AI).
-- **NLP** — 1 JD.
-- **Python** — 2 JDs (model-facing PM roles).
-- **Systems thinking** — 3 JDs (common in AI-native startups).
-- **IAM / OAuth / API keys / audit logs** — 2 JDs (platform-governance PMs).
-- **Fintech / Payments domain** — 2 JDs.
-- **Agile / Scrum** — 3 JDs.
+Signaled in only a few JDs but worth flagging — these hint at where the MNC AI-PM role is heading:
+
+- **Product Lifecycle Management** — 3 JDs (Accenture, both BitGo roles).
+- **Program Management** — 3 JDs (Amazon lists "product or program management").
+- **Leadership / Mentoring** — 3 JDs (senior/principal roles: Accenture, Salesforce, Karat).
+- **Cloud Platforms (GCP/AWS/Azure)** — 2 JDs (HashedIn by Deloitte).
+- **Microservices / Architecture** — 2 JDs (HashedIn).
+- **Automation (RPA / BPM / low-code)** — 2 JDs (Cognizant, KRAFTON).
+- **Process Improvement** — 2 JDs (BitGo).
+- **Prompt Engineering** — 1 JD (Cognizant — explicitly required).
+- **Responsible AI / AI Governance & Model Evaluation** — 1 JD (Accenture — ethical frameworks + AI model performance evaluation).
+- **UX / Design (Figma, design systems)** — 1 JD (Cognizant).
+- **Competitive Analysis** — 1 JD (Toast).
+- **0-to-1 Product building** — 1 JD (Toast).
+- **Experimentation** — 1 JD (KRAFTON — anomaly detection → experiments).
+
+**Domain signal (cross-cutting):** B2B/B2C SaaS (ServiceNow, Karat, Toast), E-commerce/Retail (Amazon, Walmart, KRAFTON), FinTech/Payments & Crypto (Amazon Pay, BitGo), CRM/Trust & Safety (Salesforce). MBA / strategy-consulting background is explicitly preferred in a couple of senior Amazon roles.
 
 ## Key Takeaways
 
-1. **AI fluency is now table stakes.** Over half of PM postings explicitly demand ML/AI-ML understanding, and "agentic AI" already appears in ~1 in 4 JDs — a fast-rising category.
-2. **The role is getting more technical.** SQL, Python, RAG, model evaluation, and even hands-on prototyping (no-code tools) show employers want PMs who can validate ideas themselves, not just write specs.
-3. **Classic PM fundamentals still dominate** — strategy/roadmap, analytics, stakeholder management, and clear communication remain the backbone alongside the new AI skills.
-4. **Governance is an emerging specialty.** A distinct cluster of senior roles centers on agent governance, RBAC/IAM, and Responsible AI — a sign of AI productization maturing in enterprises.
+1. **Process & people skills top the table.** At big MNCs, the most universal demands are stakeholder management, cross-functional collaboration, and roadmapping — the "get things shipped across large orgs" competencies — each flagged CRITICAL.
+2. **AI/ML is now a core PM expectation, not a niche.** 44% of analyzed JDs (CRITICAL) expect AI/ML product knowledge, and **agentic AI** already shows up in ~1 in 5 (Google, Salesforce, ServiceNow, KRAFTON) — a clear leading indicator.
+3. **Classic PM fundamentals still anchor the role** — strategy/vision, PRD/user-story writing, prioritization, and data analysis remain heavily demanded alongside the AI skills.
+4. **The senior MNC AI-PM is increasingly technical** — technical product management, LLMs, APIs, prompt engineering, and cloud/microservices appear across the more senior postings (Google, Microsoft, HashedIn, Cognizant).
 
 ## Methodology & Limitations
 
-- **Search queries** combined role + location + source, e.g. `AI Product Manager jobs India site:naukri.com`, `Product Manager AI India site:in.indeed.com`, `Senior Product Manager AI ML India`, varied across cities and seniority.
-- **Most productive sources:** company ATS pages surfaced via search (Greenhouse, Lever, company career sites) gave full JD text with explicit skill lists; Instahyre/Naukri snippets reliably surfaced role + skill tags even when pages were 403-blocked.
-- **Blocked/limited for full fetch:** Instahyre, Wellfound, startup.jobs, some Lever pages (403); Indeed/Naukri/Glassdoor aggregator search pages return only summaries, not individual JDs — so several entries are snippet-level only.
-- **Counting:** each skill counted once per distinct JD (by URL), not per mention. Synonyms were merged to canonical forms (e.g. GenAI/Generative AI → "Generative AI"; LLM/LLMs → "LLMs").
-- **Caveat:** ~21 of 47 entries are snippet-level, so deep-skill counts (SQL, Python, RAG, etc.) are conservative lower bounds — true demand is likely higher than shown. No postings were fabricated; every entry maps to a real retrieved URL.
+- **Search queries** combined company + role + location + site, e.g. `Product Manager AI Google India jobs`, `Amazon Senior Product Manager India site:amazon.jobs`, `ServiceNow Product Manager India site:boards.greenhouse.io`, `Deloitte Product Manager India site:linkedin.com/jobs`, varied across cities and seniority.
+- **Most productive sources:** company career pages (amazon.jobs, careers.cognizant.com) and Greenhouse boards (Karat, Toast, KRAFTON) returned full JD text; WebSearch snippets reliably surfaced responsibilities + qualifications for the rest.
+- **Blocked / expired for full fetch:** LinkedIn and Microsoft/Salesforce/Mastercard individual job pages mostly 301-redirect or return 410 (expired); Google careers pages are JS-rendered/truncated. For these, analysis relied on WebSearch snippet text.
+- **Dedup & exclusions:** 35 postings collected, all URLs unique. **8 excluded** for having no usable description (only title/company/location, or "listed alongside other roles"): Deloitte Manager-Product Architect CL5, Deloitte Senior PM, PwC ACI AI Product Manager, PwC Integration Product Manager, Mastercard Senior PM, Mastercard Manager, Microsoft Product Manager II, PayPal Product Manager. **27 valid JDs analyzed.**
+- **Counting:** each canonical skill counted once per distinct JD (by URL), never per mention. Synonyms merged to canonical forms (e.g. Gen AI/GenAI → "Generative AI"; LLM/LLMs → "LLMs"). Skills were *inferred* from sentence-level context, not just explicit "skills" lists.
+- **Caveat:** only ~7-8 of 27 are full-text JDs; the rest are rich multi-sentence snippets. Inferred skill counts are therefore **conservative lower bounds** — true demand (especially for deeper technical skills) is likely higher. No postings were fabricated; every entry maps to a real retrieved URL.
