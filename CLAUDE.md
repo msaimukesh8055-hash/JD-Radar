@@ -38,10 +38,15 @@ Target: 20-25 job descriptions per run, focused on roles such as:
 
 ## Output Format
 The report must include:
-- Run metadata (date, number of JDs analyzed, sources used, queries run)
-- Top skills table, ranked by frequency (skill, count, % of JDs mentioning it)
-- Notable emerging/niche skills (mentioned in fewer JDs but worth flagging)
-- Brief methodology note (sources, search queries used, limitations)
+- Run metadata (date, total_JDs_analyzed — valid deduplicated JDs used,
+  sources used, queries run)
+- Top skills table, ranked by frequency (skill, count, % of JDs mentioning
+  it, category — Technical / Strategic / Process / Domain). Flag any skill
+  with % of JDs >= 40% as CRITICAL.
+- Notable emerging/niche skills (mentioned or signaled in fewer JDs but
+  worth flagging)
+- Brief methodology note (sources, search queries used, JD dedup/exclusion
+  count, limitations)
 
 ## Constraints
 - WebSearch is the primary data collection method (resilient to anti-bot
