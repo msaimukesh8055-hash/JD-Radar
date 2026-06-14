@@ -14,15 +14,15 @@ records for the `jd-analyzer` skill to process.
 
 Search for postings matching roles like:
 - "AI Product Manager"
-- "Product Manager AI" / "Product Manager (AI/ML)"
-- "Senior Product Manager" with AI/ML focus
+- "Product Manager AI" / "Product Manager"
+- "Senior Product Manager"
 - "Product Manager" — general, India-based
 
 Use WebSearch with queries that combine role + location + source, e.g.:
 - `AI Product Manager jobs India site:naukri.com`
 - `Product Manager AI India site:in.indeed.com`
 - `AI Product Manager India jobs`
-- `Product Manager India hiring AI ML site:naukri.com`
+- `Product Manager India hiring AI site:naukri.com`
 
 Vary phrasing and run multiple searches to avoid duplicate results and to
 reach the 40-50 JD target.
@@ -59,7 +59,7 @@ URLs.
 
 ## Notes
 
-- Stop once ~40-50 usable postings are collected, or after a reasonable
+- Stop once ~20-25 usable postings are collected, or after a reasonable
   number of search queries (diminishing returns).
 - If a source consistently returns nothing usable (e.g., heavily blocked),
   note this in the output and move on rather than wasting more queries on it.
