@@ -8,13 +8,23 @@ produces a clean market intelligence report.
 
 ## Sources
 - Google Jobs (via web search, India-focused queries)
+- company websites or pages
+- Greenshouse
 - Naukri.com
 - Indeed India (in.indeed.com)
+- Linkedin
 
-Target: 40-50 job descriptions per run, focused on roles such as:
+Target: 20-25 job descriptions per run, focused on roles such as:
+- "Product Manager"
 - "AI Product Manager"
-- "Product Manager - AI" / "Product Manager (AI/ML)"
+- "Product Owner"
+- "Product Manager - AI" / "Product Manager"
 - "Product Manager" (India, general)
+
+## Companies to search for: search only in MNC companies like 
+- Google, Facebook, Amazon, etc
+- Consulting firms like Big4 and Big3 firms
+- Any other industry companies 
 
 ## Pipeline
 1. `/run-radar` is the entry point.
